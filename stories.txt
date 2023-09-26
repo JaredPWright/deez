@@ -1,0 +1,7 @@
+Jared:
+
+McLennan:
+
+Alex:
+-	User is new to the game and doesn’t know any of the rules or commands. The user would like to type ‘help’ for a list of things to expand on and ‘help {command}’ for an explanation of a specific command.
+-	The user has difficulty telling the difference between the enemy ship and their own, the user would like to have different colors to help differentiate the enemy ship on the grid from his own.
