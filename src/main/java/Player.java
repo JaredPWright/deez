@@ -2,6 +2,8 @@ public class Player {
     // Attributes
     private String name;
     private int health;
+    private Quadrant quadrant;
+    private Sector sector;
 
     // Constructor
     public Player(String name, int health) {
@@ -48,16 +50,28 @@ public class Player {
         System.out.println(name + " healed for " + healAmount + " points.");
     }
 
-    public static void main(String[] args) {
-        // Example usage of the Player class
-        Player player1 = new Player("John", 100);
-        player1.displayInfo();
+    // Getter and Setter for Quadrant
+    public Quadrant getQuadrant() {
+        return quadrant;
+    }
 
-        player1.takeDamage(20);
-        player1.displayInfo();
+    public void setQuadrant(Quadrant quadrant) {
+        this.quadrant = quadrant;
+    }
 
-        player1.heal(10);
-        player1.displayInfo();
+    // Getter and Setter for Sector
+    public Sector getSector() {
+        return sector;
+    }
+
+    public void setSector(Sector sector) {
+        this.sector = sector;
+    }
+
+    // Method to display player location
+    public void displayLocation() {
+        System.out.println("Quadrant: " + quadrant.GetGridDesignation());
+        System.out.println("Sector: " + sector.GetSectorDesignation());
     }
 }
 
