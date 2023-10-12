@@ -6,9 +6,11 @@ public class Player {
     private Sector sector;
 
     // Constructor
-    public Player(String name, int health) {
+    public Player(String name, int health, Quadrant quadrant, Sector sector) {
         this.name = name;
         this.health = health;
+        this.quadrant = quadrant;
+        this.sector = sector;
     }
 
     // Getter and Setter for Name
@@ -33,21 +35,7 @@ public class Player {
     public void displayInfo() {
         System.out.println("Player: " + name);
         System.out.println("Health: " + health);
-    }
-
-    // Method to simulate the player taking damage
-    public void takeDamage(int damageAmount) {
-        health -= damageAmount;
-        if (health < 0) {
-            health = 0; // Ensure health doesn't go below zero
-        }
-        System.out.println(name + " took " + damageAmount + " damage.");
-    }
-
-    // Method to simulate the player healing
-    public void heal(int healAmount) {
-        health += healAmount;
-        System.out.println(name + " healed for " + healAmount + " points.");
+        displayLocation();
     }
 
     // Getter and Setter for Quadrant
