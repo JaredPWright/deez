@@ -6,11 +6,9 @@ public class Player {
     private Sector sector;
 
     // Constructor
-    public Player(String name, int health, Quadrant quadrant, Sector sector) {
+    public Player(String name, int health) {
         this.name = name;
         this.health = health;
-        this.quadrant = quadrant;
-        this.sector = sector;
     }
 
     // Getter and Setter for Name
@@ -61,5 +59,22 @@ public class Player {
         System.out.println("Quadrant: " + quadrant.GetGridDesignation());
         System.out.println("Sector: " + sector.GetSectorDesignation());
     }
+
+    // Method to indicate player is in orbit
+    public boolean inOrbit(String command) {
+        if(command.equals("orbit")) {
+            return true;
+        }
+        return false;
+    }
+
+    // Method to indicate player is docked
+    public boolean docked(String command) {
+        if(command.equals("dock")) {
+            return true;
+        }
+        return false;
+    }
+
 }
 

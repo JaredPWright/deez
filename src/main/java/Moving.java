@@ -1,8 +1,9 @@
 public class Moving {
+    
     public static void getCoordinates(int x, int y){
 
     }
-
+/* 
     public static void move(){
         double angle, deltaX, deltaY, bigger, x, y, finalDelta, finalX, finalY, stopegy;
         int oldQuadrantX, oldQuadrantY;
@@ -35,7 +36,7 @@ public class Moving {
 
         // Move within the quadrant
         quadrant[sec]
-    }
+    }*/
 
     public static void dock(){
 

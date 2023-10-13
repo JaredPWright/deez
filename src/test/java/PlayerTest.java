@@ -4,11 +4,23 @@ import static org.junit.Assert.*;
 public class PlayerTest {
 
     @Test
-    public void testPlayer() {
-        Player player = new Player("Test Player", 100, Quadrant.ALPHA, Sector.A1);
-        assertEquals("Test Player", player.getName());
+    public void PlayerDocked() {
+        Player player = new Player("Player", 100);
+        player.docked("dock");
+        assertTrue(player.docked("dock"));
+    }
+
+    @Test
+    public void PlayerInOrbit() {
+        Player player = new Player("Player", 100);
+        player.inOrbit("orbit");
+        assertTrue(player.inOrbit("orbit"));
+    }
+
+    @Test
+    public void PlayerHealth() {
+        Player player = new Player("Player", 100);
+        player.setHealth(100);
         assertEquals(100, player.getHealth());
-        assertEquals(Quadrant.ALPHA, player.getQuadrant());
-        assertEquals(Sector.A1, player.getSector());
     }
 }
