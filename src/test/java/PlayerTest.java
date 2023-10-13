@@ -23,4 +23,12 @@ public class PlayerTest {
         player.setHealth(100);
         assertEquals(100, player.getHealth());
     }
+
+    @Test
+    public void PlayerDamaged() {
+        Player player = new Player("Player", 100);
+        player.setHealth(100);
+        player.setHealth(player.getHealth() - 10);
+        assertEquals(90, player.getHealth());
+    }
 }
