@@ -1,6 +1,6 @@
 Certainly! Here are some user stories based on the document:
 
-1. As a player, I want to understand the background story of the game, which involves the collapse of the Organian Peace Treaty, the Federation's war with the Klingon Empire, and the role of the Romulan Star Empire.
+1. As a player, I want to understand the background story of the game, which involves the collapse of the Organian Peace Treaty, the Federation's war with the Klingon Empire, and the role of the Romulan SST.Star Empire.
 
 2. As a player, I want to know that I will be in command of the Starship U.S.S. Enterprise and that my primary objective is to defeat the Klingon invasion fleet and protect the Federation.
 
@@ -78,13 +78,13 @@ Certainly! Here are some user stories based on the document:
 
 9. As a player, I want to receive encouragement to experiment with commands and not be afraid to make mistakes.
 
-**Short-Range Scan:**
+**Short-Range SST.Scan:**
 
 10. As a player, I want to learn about the "SRSCAN" command, which provides a detailed short-range scan of the current quadrant.
 
 11. As a player, I want the option to type "N" after "SRSCAN" to exclude status information in the short-range scan.
 
-12. As a player, I want the option to type "C" after "SRSCAN" to receive both a short-range scan and a Star Chart.
+12. As a player, I want the option to type "C" after "SRSCAN" to receive both a short-range scan and a SST.Star Chart.
 
 13. As a player, I want to understand the information displayed in a short-range scan, including the quadrant's layout, ship position, enemy presence, and various objects.
 
@@ -121,7 +121,7 @@ Here are user stories for the mentioned commands:
 
 5. As a player, I want to use the "QUIT" command to immediately cancel the current game without reaching a conclusion.
 
-6. As a player, I want the option to start a new game or exit the Star Trek program after using the "QUIT" command.
+6. As a player, I want the option to start a new game or exit the SST.Star Trek program after using the "QUIT" command.
 
 **User Stories for "SENSOR-SCAN" Command:**
 
