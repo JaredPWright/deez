@@ -1,3 +1,5 @@
+package SST;
+
 public class ObjectKey {
     public String getKey = "default";
     public String setKey = "default";
