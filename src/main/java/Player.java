@@ -1,3 +1,6 @@
+import SST.Quadrant;
+import SST.Sector;
+
 public class Player {
     // Attributes
     private String name;

@@ -8,12 +8,9 @@ public class ScanCanvas extends JFrame {
     ScanCanvas(){
         super("defCanvas");
 
-        Canvas canvas = new Canvas(){
-
-            public void paint(Graphics graphics){
-
+        Canvas canvas = new Canvas() {
+            public void paint(Graphics graphics) {
                 graphics.setColor(Color.white);
-
                 graphics.setFont(new Font("White Rabbit", 1, 20));
             }
         };
@@ -22,18 +19,15 @@ public class ScanCanvas extends JFrame {
 
         add(canvas);
         setSize(400, 300);
-        show();
+        setVisible(true);
     }
 
     ScanCanvas(String canvasTitle){
         super(canvasTitle);
 
-        Canvas canvas = new Canvas(){
-
-            public void paint(Graphics graphics){
-
+        Canvas canvas = new Canvas() {
+            public void paint(Graphics graphics) {
                 graphics.setColor(Color.white);
-
                 graphics.setFont(new Font("White Rabbit", 1, 20));
             }
         };
@@ -42,18 +36,15 @@ public class ScanCanvas extends JFrame {
 
         add(canvas);
         setSize(400, 400);
-        show();
+        setVisible(true);
     }
 
     ScanCanvas(String canvasTitle, int canvasWidth, int canvasHeight){
         super(canvasTitle);
 
-        Canvas canvas = new Canvas(){
-
-            public void paint(Graphics graphics){
-
+        Canvas canvas = new Canvas() {
+            public void paint(Graphics graphics) {
                 graphics.setColor(Color.white);
-
                 graphics.setFont(new Font("White Rabbit", 1, 20));
             }
         };
@@ -62,6 +53,6 @@ public class ScanCanvas extends JFrame {
 
         add(canvas);
         setSize(canvasWidth, canvasHeight);
-        show();
+        setVisible(true);
     }
 }
