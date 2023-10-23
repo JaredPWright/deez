@@ -1,3 +1,5 @@
+package SST;
+
 public class MapDesignation {
     public int xDes = 0;
     public int yDes = 0;

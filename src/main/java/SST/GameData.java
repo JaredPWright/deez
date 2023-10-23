@@ -1,3 +1,5 @@
+package SST;
+
 public class GameData {
     private String playerName = "default";
     public String GetPlayerName(String getKey){

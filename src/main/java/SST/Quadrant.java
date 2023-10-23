@@ -1,3 +1,5 @@
+package SST;
+
 public class Quadrant{
     private String stringDesignation = "def";
     public String GetStringDesignation(){
@@ -20,7 +22,7 @@ public class Quadrant{
     public Quadrant(String name, int desX, int desY){
           for (int x = 0; x < 10; x++){
               for(int y = 0; y < 10; y++){
-                  this.sectorGrid[x][y] = new Sector(("Sector " + x + y), x, y);
+                  this.sectorGrid[x][y] = new Sector(("SST.Sector " + x + y), x, y);
               }
           }
 
