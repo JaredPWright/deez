@@ -9,12 +9,10 @@ public class Moving {
     double angle, deltaX, deltaY, bigger, x, y, finald, finalX, finalY, stopegy;
     int oldQuadrantX, oldQuadrantY;
     int tractorBeam = 0, n, l, iX, iY, kink, kinks, iQuadrant;
-    
-    Player player = new Player(null, iQuadrant);
 
-    if (player.inOrbit) {
+    if (inOrbit) {
         System.out.println("SULU- \"Leaving standard orbit.\"");
-        inOrbit = false;
+        orbit = false;
     }
 
     double direc = 0.0; // assuming direc is a double variable

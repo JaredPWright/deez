@@ -3,7 +3,7 @@ public class Player {
     // Attributes
     private String name;
     private int health;
-    private boolean inOrbit = true, docked = false;
+    private boolean inOrbit = true, docked = false, cloaked = false;
     private Quadrant quadrant;
     private Sector sector;
 
@@ -35,7 +35,7 @@ public class Player {
     public void displayInfo() {
         System.out.println("Player: " + name);
         System.out.println("Health: " + health);
-        displayLocation();
+        DisplayLocation();
     }
 
     // Getter and Setter for Quadrant
@@ -57,13 +57,13 @@ public class Player {
     }
 
     // Method to display player location
-    public void displayLocation() {
+    public void DisplayLocation() {
         System.out.println("Quadrant: " + quadrant.GetGridDesignation());
         System.out.println("Sector: " + sector.GetSectorDesignation());
     }
 
     // Method to indicate player is in orbit
-    public boolean orbit(String command) {
+    public boolean Orbit(String command) {
         if(command.equals("orbit") && !inOrbit) {
             return inOrbit = true;
         }
@@ -71,11 +71,18 @@ public class Player {
     }
 
     // Method to indicate player is docked
-    public boolean docked(String command) {
+    public boolean Docked(String command) {
         if(command.equals("dock") && !docked) {
             return docked = true;
         }
         return docked;
+    }
+
+    public boolean Cloaked(String command) {
+        if(command.equals("cloak") && !cloaked) {
+            return cloaked = true;
+        }
+        return cloaked;
     }
 
 }
