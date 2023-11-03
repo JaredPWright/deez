@@ -1,3 +1,4 @@
+package SST;
 public class Moving {
     
     public static void getCoordinates(int x, int y){
@@ -7,11 +8,11 @@ public class Moving {
     void move() {
     double angle, deltaX, deltaY, bigger, x, y, finald, finalX, finalY, stopegy;
     int oldQuadrantX, oldQuadrantY;
-    int trbeam = 0, n, l, iX, iY, kink, kinks, iQuadrant;
+    int tractorBeam = 0, n, l, iX, iY, kink, kinks, iQuadrant;
     
     Player player = new Player(null, iQuadrant);
 
-    if (inOrbit) {
+    if (player.inOrbit) {
         System.out.println("SULU- \"Leaving standard orbit.\"");
         inOrbit = false;
     }

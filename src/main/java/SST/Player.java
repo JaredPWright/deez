@@ -1,10 +1,9 @@
-import SST.Quadrant;
-import SST.Sector;
-
+package SST;
 public class Player {
     // Attributes
     private String name;
     private int health;
+    private boolean inOrbit = true, docked = false;
     private Quadrant quadrant;
     private Sector sector;
 
@@ -64,19 +63,19 @@ public class Player {
     }
 
     // Method to indicate player is in orbit
-    public boolean inOrbit(String command) {
-        if(command.equals("orbit")) {
-            return true;
+    public boolean orbit(String command) {
+        if(command.equals("orbit") && !inOrbit) {
+            return inOrbit = true;
         }
-        return false;
+        return inOrbit;
     }
 
     // Method to indicate player is docked
     public boolean docked(String command) {
-        if(command.equals("dock")) {
-            return true;
+        if(command.equals("dock") && !docked) {
+            return docked = true;
         }
-        return false;
+        return docked;
     }
 
 }
