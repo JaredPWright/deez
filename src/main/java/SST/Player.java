@@ -1,3 +1,5 @@
+package SST;
+
 import SST.Quadrant;
 import SST.Sector;
 
@@ -34,7 +36,7 @@ public class Player {
 
     // Method to display player information
     public void displayInfo() {
-        System.out.println("Player: " + name);
+        System.out.println("SST.Player: " + name);
         System.out.println("Health: " + health);
         displayLocation();
     }

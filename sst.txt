@@ -672,7 +672,7 @@ from the shields to the ship.  Transferring energy constitutes a turn.
 If you transfer energy to the shields while you are under attack,
 they will be at the new energy level when you are next hit.
 
-Enemy torpedoes hitting your ship explode on your shields (if they
+SST.Enemy torpedoes hitting your ship explode on your shields (if they
 are up) and have essentially the same effect as phaser hits.
                                                                        12
  ***********
@@ -1252,7 +1252,7 @@ providing the file is in the current directory.
 The cloaking device prevents your ship from being seen by any enemy
 vessels.  When the cloaking device is in use, your subspace radio will
 not receive transmissions, torpedoes will be less accurate, you cannot
-dock, and you cannot use your warp engines. Enemy ships will get a
+dock, and you cannot use your warp engines. SST.Enemy ships will get a
 chance to attack you when you turn clocking on.
 
 The Treaty of Algeron with the Romulans in Stardate 2311 prohibits the
@@ -1585,7 +1585,7 @@ derived from a still earlier version in use at Penn State University.
      The original shows in short story form.  (Bantam)
 
  8.  "Spock Must Die", by James Blish.  An original novel, but
-     rather similar to the show "The Enemy Within".  (Bantam)
+     rather similar to the show "The SST.Enemy Within".  (Bantam)
 
  9.  Model kits of the Enterprise and a "Klingon Battle-Cruiser"
      by AMT Corporation are available at most hobby shops.
