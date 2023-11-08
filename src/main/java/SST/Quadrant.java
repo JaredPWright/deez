@@ -1,33 +1,20 @@
 package SST;
 
-public class Quadrant{
-    private String stringDesignation = "def";
-    public String GetStringDesignation(){
-        return  stringDesignation;
-    }
+import SST.Components.Position2D;
 
-    private MapDesignation gridDesignation;
-    public void SetGridDesignation(int x, int y){
-        gridDesignation = new MapDesignation(x, y);
-    }
-    public MapDesignation GetGridDesignation(){
-        return gridDesignation;
-    }
+public class Quadrant extends Entity{
 
     private final Sector[][] sectorGrid = new Sector[10][10];
-    public Sector[][] GetSectorGrid(){
-        return sectorGrid;
+
+    public Quadrant(String name, int quadrantIndex) {
+        super(name);
+        addComponent(new Position2D(0,quadrantIndex));
+        for (int x = 0; x < 10; x++)
+            for(int y = 0; y < 10; y++)
+                this.sectorGrid[x][y] = new Sector(("SST.Sector " + x + y), quadrantIndex, x, y);
     }
 
-    public Quadrant(String name, int desX, int desY){
-          for (int x = 0; x < 10; x++){
-              for(int y = 0; y < 10; y++){
-                  this.sectorGrid[x][y] = new Sector(("SST.Sector " + x + y), x, y);
-              }
-          }
-
-          this.stringDesignation = name;
-
-          SetGridDesignation(desX, desY);
+    public Sector[][] GetSectorGrid(){
+        return sectorGrid;
     }
 }

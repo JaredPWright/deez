@@ -61,7 +61,7 @@ public class Player {
 
     // Method to display player location
     public void displayLocation() {
-        System.out.println("Quadrant: " + quadrant.GetGridDesignation());
+        //System.out.println("Quadrant: " + quadrant.GetGridDesignation());
         System.out.println("Sector: " + sector.GetSectorDesignation());
     }
 

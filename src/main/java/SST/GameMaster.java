@@ -10,12 +10,17 @@ public class GameMaster {
 
     private static GameMaster single_instance = null;
 
+    public static StarMap starMap;
+
     public Player player;
 
-    private Map<String,Enemy> klingons = new HashMap<String,Enemy>();
-    private Map<String,Enemy> romulans = new HashMap<String,Enemy>();
+    private Map<String, Entity> klingons = new HashMap<String, Entity>();
+    private Map<String, Entity> romulans = new HashMap<String, Entity>();
 
     private GameDifficulty difficulty = GameDifficulty.Normal;
+    public void SetDifficulty(GameDifficulty diff){
+        difficulty = diff;
+    }
 
     private GameMaster(){
 
@@ -24,15 +29,12 @@ public class GameMaster {
     public GameDifficulty GetDifficulty(){
         return difficulty;
     }
-    public void SetDifficulty(GameDifficulty diff){
-        difficulty = diff;
-    }
 
-    public Map<String,Enemy> GetKlingons(){
+    public Map<String, Entity> GetKlingons(){
         return klingons;
     }
 
-    public Map<String,Enemy> GetRomulans(){
+    public Map<String, Entity> GetRomulans(){
         return romulans;
     }
 
@@ -46,6 +48,8 @@ public class GameMaster {
 
     public void StartNewGame(GameDifficulty gameDifficulty, String filename){
         SetDifficulty(gameDifficulty);
+
+        starMap = new StarMap("starMap_" + filename);
 
         SaveGame(filename);
     }
@@ -73,11 +77,11 @@ public class GameMaster {
             throw new RuntimeException(e);
         }
 
-        for (Map.Entry<String,Enemy> entry : klingons.entrySet()) {
+        for (Map.Entry<String, Entity> entry : klingons.entrySet()) {
             entry.getValue().TakeAction();
         }
 
-        for(Map.Entry<String,Enemy> entry : romulans.entrySet()){
+        for(Map.Entry<String, Entity> entry : romulans.entrySet()){
             entry.getValue().TakeAction();
         }
     }
@@ -93,21 +97,21 @@ public class GameMaster {
             throw new RuntimeException(e);
         }
 
-        for (Map.Entry<String,Enemy> entry : klingons.entrySet()) {
+        for (Map.Entry<String, Entity> entry : klingons.entrySet()) {
             entry.getValue().TakeAction();
         }
 
-        for(Map.Entry<String,Enemy> entry : romulans.entrySet()){
+        for(Map.Entry<String, Entity> entry : romulans.entrySet()){
             entry.getValue().TakeAction();
         }
     }
 
     public void tick(){
-        for (Map.Entry<String,Enemy> entry : klingons.entrySet()) {
+        for (Map.Entry<String, Entity> entry : klingons.entrySet()) {
             entry.getValue().TakeAction();
         }
 
-        for(Map.Entry<String,Enemy> entry : romulans.entrySet()){
+        for(Map.Entry<String, Entity> entry : romulans.entrySet()){
             entry.getValue().TakeAction();
         }
     }

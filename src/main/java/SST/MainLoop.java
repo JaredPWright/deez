@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class MainLoop {
 
     public static boolean commandParsed = true;
-    public static StarMap starMap;
 
     public static void main(String[] args){
 
