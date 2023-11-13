@@ -1,5 +1,11 @@
 package SST.Components;
 
-public class Friendly {
+import SST.Entity;
+
+public class Friendly extends IComponent {
     public String componentName = "Friendly";
+
+    public Friendly(){
+        super();
+    }
 }

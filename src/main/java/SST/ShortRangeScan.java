@@ -5,7 +5,7 @@ public class ShortRangeScan implements Scan{
     @Override
     public Quadrant GetScanArea(MapCoordinates3D mDes, String parentName) {
         //make sure player always knows the name of the quadrant it's in
-        return GameMaster.starMap.quadrantDictionary.get(parentName);
+        return GameMaster.getInstance().starMap.quadrantDictionary.get(parentName);
     }
 
     @Override

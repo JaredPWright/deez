@@ -1,6 +1,6 @@
 package SST.Components;
 
-public enum AgressionLevel {
+public enum AggressionLevel {
     Low,
     Moderate,
     High,

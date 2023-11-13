@@ -1,9 +1,10 @@
 package SST;
 
+//DEPRECATED
 public class Star {
-    public char icon = 'S';
-
-    public Star(){
-        icon = 'S';
-    }
+//    public char icon = 'S';
+//
+//    public Star(){
+//        icon = 'S';
+//    }
 }

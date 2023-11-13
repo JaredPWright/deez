@@ -10,15 +10,17 @@ import java.util.Map;
 
 public class Entity {
 
-    Map<String,IComponent> components = new HashMap<String,IComponent>();
+    public Map<String,IComponent> components = new HashMap<String,IComponent>();
 
     public Entity(String name){
         addComponent(new Name(name));
     }
 
-    public void addComponent(IComponent ... newComponent){
-        for(int i = 0; i < newComponent.length; i++)
+    public void addComponent(IComponent ... newComponent) {
+        for (int i = 0; i < newComponent.length; i++){
             components.put(newComponent[i].componentName, newComponent[i]);
+            newComponent[i].entity = this;
+        }
 
     }
 
