@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29db9cce-14de-405a-aea1-a8c1a377c8fd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/move.java" beforeDir="false" afterPath="$PROJECT_DIR$/move.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phaser.java" beforeDir="false" afterPath="$PROJECT_DIR$/phaser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Klingon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +35,11 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/bentl/OneDrive/Documents/GitHub/deez1/src/main/java/SST&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bentl\OneDrive\Documents\GitHub\deez1\src\main\java\SST" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
