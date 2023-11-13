@@ -5,7 +5,6 @@ import SST.Components.Position2D;
 public class Quadrant extends Entity{
 
     private final Entity[][] sectorGrid = new Entity[10][10];
-
     public Quadrant(String name, int quadrantIndex) {
         super(name);
         addComponent(new Position2D(0,quadrantIndex));

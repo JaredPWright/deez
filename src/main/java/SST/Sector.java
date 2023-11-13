@@ -4,7 +4,7 @@ import SST.Components.Position3D;
 import SST.Components.Renderable;
 
 public class Sector extends Entity{
-
+  
     public Sector(String name, int q, int x, int y){
         super(name);
         addComponent(new Position3D(q,x,y), new Renderable( '*'));
