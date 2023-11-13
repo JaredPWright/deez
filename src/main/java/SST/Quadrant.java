@@ -1,5 +1,7 @@
 package SST;
 
+import java.util.*;
+
 public class Quadrant{
     private String stringDesignation = "def";
     public String GetStringDesignation(){
@@ -19,10 +21,19 @@ public class Quadrant{
         return sectorGrid;
     }
 
+    private ArrayList<Star> starList = new ArrayList<>() {
+    };
+    public ArrayList<Star> GetStarList(){ return starList; }
+
     public Quadrant(String name, int desX, int desY){
           for (int x = 0; x < 10; x++){
               for(int y = 0; y < 10; y++){
-                  this.sectorGrid[x][y] = new Sector(("SST.Sector " + x + y), x, y);
+                  SplittableRandom tempRand = new SplittableRandom();
+
+                  if(tempRand.nextInt(1, 101) <= 5)
+                      this.sectorGrid[x][y] = new Sector(("SST.Sector " + x + y), x, y, true, false, this);
+                  else
+                    this.sectorGrid[x][y] = new Sector(("SST.Sector " + x + y), x, y);
               }
           }
 
