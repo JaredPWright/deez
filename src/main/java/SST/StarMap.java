@@ -23,7 +23,7 @@ public class StarMap {
             //cast it to the proper subclass
             Name temp = (Name)tempQuadrant.components.get("Name");
             //add it to our dictionary, just as a second way to access it. Don't know if we'll use it
-            quadrantDictionary.put(temp.GetName(), tempQuadrant);
+            quadrantDictionary.put(temp.getName(), tempQuadrant);
         }
     }
 }

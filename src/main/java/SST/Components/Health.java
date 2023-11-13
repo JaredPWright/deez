@@ -6,6 +6,7 @@ public class Health extends IComponent{
     public String componentName = "Health";
 
     private int maxHealth;
+    public int getMaxHealth() { return maxHealth; }
     private int health = 1;
 
     public Health(int setMaxHealth) {
@@ -20,10 +21,10 @@ public class Health extends IComponent{
         health = maxHealth;
     }
 
-    public int GetHealth(){
+    public int getHealth(){
         return health;
     }
-    public void SetHealth(int adjustedHealth){
-        health = adjustedHealth;
+    public void setHealth(int adjustedHealth){
+        health -= adjustedHealth;
     }
 }

@@ -16,16 +16,23 @@ public class Entity {
         addComponent(new Name(name));
     }
 
+    public boolean active = true;
+
     public void addComponent(IComponent ... newComponent) {
         for (int i = 0; i < newComponent.length; i++){
             components.put(newComponent[i].componentName, newComponent[i]);
             newComponent[i].entity = this;
         }
+    }
 
+    public void removeComponent(String componentName){
+        components.remove(componentName);
     }
 
     public void TakeAction(){
 
+        if(!active)
+            return;
         System.out.println("Taking action debug statement.");
     }
 }

@@ -8,10 +8,14 @@ import SST.Components.Position3D;
 import java.util.ArrayList;
 
 public class EntityStorage {
-    ArrayList<Position3D> positionCabinet = new ArrayList<>();
-    ArrayList<Enemy> enemyCabinet = new ArrayList<>();
-    ArrayList<Movable> movableCabinet = new ArrayList<>();
-    ArrayList<IComponent> genPopComponentCabinet = new ArrayList<>();
+    private ArrayList<Position3D> positionCabinet = new ArrayList<>();
+    public ArrayList<Position3D> getPositionCabinet() { return positionCabinet; }
+    private ArrayList<Enemy> enemyCabinet = new ArrayList<>();
+    public ArrayList<Enemy> getEnemyCabinet() { return enemyCabinet; }
+    private ArrayList<Movable> movableCabinet = new ArrayList<>();
+    public ArrayList<Movable> getMovableCabinet() { return movableCabinet; }
+    private ArrayList<IComponent> genPopComponentCabinet = new ArrayList<>();
+    public ArrayList<IComponent> getGenPopComponentCabinet() { return genPopComponentCabinet; }
 
     public void AddToGenPop(IComponent... add){
         for (IComponent icomp : add){

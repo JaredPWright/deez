@@ -6,6 +6,8 @@ public class MainLoop {
 
     public static boolean commandParsed = true;
 
+    public GameMaster gm = GameMaster.getInstance();
+
     public static void main(String[] args){
 
         System.out.println("Welcome to Super Star Trek!\nNew Game (N/n) or Load Game (L/l)");

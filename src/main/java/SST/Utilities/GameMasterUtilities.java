@@ -4,6 +4,7 @@ import SST.Components.IComponent;
 import SST.Components.Name;
 import SST.Components.Position3D;
 import SST.Entity;
+import SST.GameMaster;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -28,12 +29,22 @@ public class GameMasterUtilities {
             newEntity.addComponent(newComponents);
 
             Name tempName = (Name) newEntity.components.get("Name");
-            storageLoc.put(tempName.GetName(), newEntity);
+            storageLoc.put(tempName.getName(), newEntity);
         }
     }
 
-//    public boolean spaceOccupied(Position3D objectPosition){
-//
-//        for(Position3D pos : )
-//    }
+    public boolean spaceOccupied(Position3D objectPosition){
+
+        //returns true if there is a non-traversable object in a given space
+        for(Position3D pos : GameMaster.getInstance().entityStorage.getPositionCabinet()){
+            if(pos == objectPosition){
+                if(pos.entity.components.containsKey("Traversable"))
+                    return false;
+                else
+                    return true;
+            }
+        }
+
+        return false;
+    }
 }

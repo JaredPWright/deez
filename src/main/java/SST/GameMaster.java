@@ -5,13 +5,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.lang.reflect.InvocationTargetException;
+import java.sql.Time;
 import java.util.*;
 
 import SST.Components.*;
-import SST.Utilities.DifficultyModifier;
-import SST.Utilities.DifficultyModifiers;
-import SST.Utilities.EntityStorage;
-import SST.Utilities.GameMasterUtilities;
+import SST.Systems.Victory;
+import SST.Utilities.*;
 import com.google.common.collect.Range;
 import com.google.gson.Gson;
 
@@ -37,6 +36,7 @@ public class GameMaster {
     }
     private DifficultyModifier diffMod;
     public DifficultyModifier getDiffMod() { return diffMod; }
+    private GameStats gameStats;
 
     //for spawning purposes. We'll set these when we load the game.
     private Random d3 = new Random();
@@ -45,6 +45,8 @@ public class GameMaster {
     public int basesPerQuad = 1;
 
     public double novaChance = .05;
+
+    private Date startTime;
 
     private GameMaster(){
 
@@ -79,6 +81,8 @@ public class GameMaster {
         setGlobalValues(gameDifficulty);
 
         starMap = new StarMap("starMap_" + filename);
+        gameStats = new GameStats();
+        startTime = new Date();
 
         int q = 0;
         for(Quadrant quad : starMap.GetQuadrantGrid()) {
@@ -86,6 +90,8 @@ public class GameMaster {
                 for(Entity sector : sects) {
                     ArrayList slotsTaken = new ArrayList<Position3D>();
                     GameMasterUtilities gmu = new GameMasterUtilities();
+
+                    //you can replace this thing if needed, McLennan
                     gmu.GenerateEntities("klingon", enemiesPerQuad, q, klingons, slotsTaken,
                                         new Enemy(),
                                         new Combatant(),
@@ -131,13 +137,13 @@ public class GameMaster {
             throw new RuntimeException(e);
         }
 
-        for (Map.Entry<String, Entity> entry : klingons.entrySet()) {
-            entry.getValue().TakeAction();
-        }
+        //this checks to see if the player has won
+        Victory victory = new Victory();
+        victory.declareVictory();
 
-//        for(Map.Entry<String, Entity> entry : romulans.entrySet()){
-//            entry.getValue().TakeAction();
-//        }
+        Date newTime = new Date();
+        gameStats.turns++;
+        gameStats.timePlayed += startTime.getTime() - newTime.getTime();
     }
 
     public void tick(String methodName, Object obj){
@@ -151,23 +157,22 @@ public class GameMaster {
             throw new RuntimeException(e);
         }
 
-        for (Map.Entry<String, Entity> entry : klingons.entrySet()) {
-            entry.getValue().TakeAction();
-        }
+        Victory victory = new Victory();
+        victory.declareVictory();
 
-//        for(Map.Entry<String, Entity> entry : romulans.entrySet()){
-//            entry.getValue().TakeAction();
-//        }
+        Date newTime = new Date();
+        gameStats.turns++;
+        gameStats.timePlayed += startTime.getTime() - newTime.getTime();
     }
 
     public void tick(){
-        for (Map.Entry<String, Entity> entry : klingons.entrySet()) {
-            entry.getValue().TakeAction();
-        }
 
-//        for(Map.Entry<String, Entity> entry : romulans.entrySet()){
-//            entry.getValue().TakeAction();
-//        }
+        Victory victory = new Victory();
+        victory.declareVictory();
+
+        Date newTime = new Date();
+        gameStats.turns++;
+        gameStats.timePlayed += startTime.getTime() - newTime.getTime();
     }
 
     public void setGlobalValues(GameDifficulty gameDifficulty){
@@ -182,7 +187,4 @@ public class GameMaster {
         starsPerQuad = d3.nextInt(starsPerQuad) * diffMod.getStarsPerQuadrantMultiplier();
         basesPerQuad = d3.nextInt(basesPerQuad) * diffMod.getBasesPerQuadrantMultiplier();
     }
-
-    //Leaving this here in case we get to saving stuff later.
-//    public void setGlobalValues(){}
 }
