@@ -21,7 +21,7 @@ public class Quadrant{
         return sectorGrid;
     }
 
-    private ArrayList<Star> starList = new ArrayList<>() {
+    private ArrayList<Star> starList = new ArrayList<Star>() {
     };
     public ArrayList<Star> GetStarList(){ return starList; }
 
