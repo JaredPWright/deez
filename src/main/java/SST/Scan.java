@@ -1,6 +1,6 @@
 package SST;
 
 public interface Scan<T> {
-    public T GetScanArea(MapDesignation mDes, String parentName);
-    public void GenerateScanCanvas(MapDesignation mapDes, String parentName);
+    public T GetScanArea(MapCoordinates3D mDes, String parentName);
+    public void GenerateScanCanvas(MapCoordinates3D mapDes, String parentName);
 }
