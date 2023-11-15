@@ -1,9 +1,9 @@
 package SST;
 
-public class Star {
-    public char icon = 'S';
-
-    public Star(){
-        icon = 'S';
+//DEPRECATED
+public class Star extends Entity {
+    public Star(String name) {
+        super(name);
     }
+    public boolean isBlackHole = false;
 }

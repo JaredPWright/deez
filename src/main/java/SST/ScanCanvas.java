@@ -8,6 +8,7 @@ import java.awt.*;
 public class ScanCanvas extends JFrame {
 
     ScanCanvas(String canvasTitle, int canvasWidth, int canvasHeight) {
+
         super(canvasTitle);
 
         Canvas canvas = new Canvas() {
@@ -56,5 +57,6 @@ public class ScanCanvas extends JFrame {
         SwingUtilities.invokeLater(() -> {
             new ScanCanvas("Custom Pattern", 320, 320);
         });
+
     }
 }
