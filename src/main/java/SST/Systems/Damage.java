@@ -4,7 +4,7 @@ import SST.Components.Health;
 
 public class Damage {
 
-    public void damage(Health h, int damage){
+    public static void damage(Health h, int damage){
         h.setHealth(damage);
     }
 }

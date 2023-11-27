@@ -10,10 +10,10 @@ public class Move {
             if (line.equals("FORWARD")) {
                 int warp = getWarp();
                 int move = movement * warp;
-                int sec = Player.getSector();
+                int sec = GameMaster.getInstance().player.getSector();
 
                 // Assuming setSector is a method in the Player class
-                Player.setSector(sec + move);
+                GameMaster.getInstance().player.setSector(sec + move);
 
                 // When player is added, find the coordinates in the nested for loop and move the player up x places
             }
@@ -21,10 +21,10 @@ public class Move {
             if (line.equals("RIGHT")) {
                 int warp = getWarp();
                 int move = movement * warp;
-                int qua = Player.getQuadrant();
+                int qua = GameMaster.getInstance().player.getQuadrant();
 
                 // Assuming setQuadrant is a method in the Player class
-                Player.setQuadrant(qua + move);
+                GameMaster.getInstance().player.setQuadrant(qua + move);
 
                 // When player is added, find the coordinates in the nested for loop and move the player right x places
             }
@@ -32,10 +32,10 @@ public class Move {
             if (line.equals("LEFT")) {
                 int warp = getWarp();
                 int move = movement * warp;
-                int qua = Player.getQuadrant();
+                int qua = GameMaster.getInstance().player.getQuadrant();
 
                 // Assuming setQuadrant is a method in the Player class
-                Player.setQuadrant(qua - move);
+                GameMaster.getInstance().player.setQuadrant(qua - move);
 
                 // When player is added, find the coordinates in the nested for loop and move the player left x places
             }

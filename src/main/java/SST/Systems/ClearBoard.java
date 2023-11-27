@@ -8,7 +8,7 @@ import SST.Utilities.GameMasterUtilities;
 
 public class ClearBoard {
 
-    public void clearTheBoard(Entity... entities){
+    public static void clearTheBoard(Entity... entities){
         for(Entity entity : entities){
             if(entity.components.containsKey("Health")){
                 Health tempHealth = (Health) entity.components.get("Health");

@@ -8,7 +8,7 @@ import javax.swing.text.Position;
 
 public class Explosion {
 
-    public void explode(int range, Entity explodingEntity){
+    public static void explode(int range, Entity explodingEntity){
         for(Position3D stellarObjects : GameMaster.getInstance().entityStorage.getPositionCabinet()){
             Position3D objPos = (Position3D) explodingEntity.components.get("Position3D");
 
