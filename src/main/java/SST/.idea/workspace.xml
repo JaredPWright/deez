@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29db9cce-14de-405a-aea1-a8c1a377c8fd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/LongRangeScan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manualmove.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/MainLoop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sector.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Star.java" beforeDir="false" afterPath="$PROJECT_DIR$/Star.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/move.java" beforeDir="false" afterPath="$PROJECT_DIR$/move.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +64,11 @@
           <url>file://$PROJECT_DIR$/parser.java</url>
           <line>88</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Sector.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

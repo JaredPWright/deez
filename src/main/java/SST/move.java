@@ -1,61 +1,23 @@
-package SST;
+public class AutoMove {
+    public void move(Entity entity) {
+        // Implement logic for automatic movement
+        // This could include random movements, AI-driven decisions, etc.
+        // For simplicity, let's assume random movement within the current quadrant
+        Quadrant currentQuadrant = entity.getQuadrant();
+        int newX = entity.getPosition().getX() + getRandomMovement();
+        int newY = entity.getPosition().getY() + getRandomMovement();
 
-public class Move {
-    public static int movement = 1;
+        // Ensure new coordinates are within the quadrant bounds
+        newX = Math.max(0, Math.min(9, newX));
+        newY = Math.max(0, Math.min(9, newY));
 
-    public static void main(String[] args) {
-        for (int i = 0; i < args.length; i++) {
-            String line = args[i];
-
-            if (line.equals("FORWARD")) {
-                int warp = getWarp();
-                int move = movement * warp;
-                int sec = Player.getSector();
-
-                // Assuming setSector is a method in the Player class
-                Player.setSector(sec + move);
-
-                // When player is added, find the coordinates in the nested for loop and move the player up x places
-            }
-
-            if (line.equals("RIGHT")) {
-                int warp = getWarp();
-                int move = movement * warp;
-                int qua = Player.getQuadrant();
-
-                // Assuming setQuadrant is a method in the Player class
-                Player.setQuadrant(qua + move);
-
-                // When player is added, find the coordinates in the nested for loop and move the player right x places
-            }
-
-            if (line.equals("LEFT")) {
-                int warp = getWarp();
-                int move = movement * warp;
-                int qua = Player.getQuadrant();
-
-                // Assuming setQuadrant is a method in the Player class
-                Player.setQuadrant(qua - move);
-
-                // When player is added, find the coordinates in the nested for loop and move the player left x places
-            }
-
-            if (line.equals("BACKWARD")) {
-                int warp = getWarp();
-                int move = movement * warp;
-                int sec = Player.getSector();
-
-                // Assuming setSector is a method in the Player class
-                Player.setSector(sec - move);
-
-                // When player is added, find the coordinates in the nested for loop and move the player down x places
-            }
-        }
+        // Update the entity's position
+        entity.setPosition(new Position2D(newX, newY));
     }
 
-    private static int getWarp() {
-        // Implement the logic for obtaining the warp factor
-        // This might involve user input or a predefined value
-        return 1; // Placeholder, replace with actual logic
+    private int getRandomMovement() {
+        // Implement logic to get a random movement value
+        // For simplicity, let's assume a random value between -1 and 1
+        return (int) (Math.random() * 3) - 1;
     }
 }
