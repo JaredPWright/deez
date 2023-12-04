@@ -14,6 +14,7 @@ C:\Users\jdubo\Documents\JavaProjects\SuperStarTrak\deez\src\main\java\SST\Compo
 C:\Users\jdubo\Documents\JavaProjects\SuperStarTrak\deez\src\main\java\SST\Utilities\GameMasterUtilities.java
 C:\Users\jdubo\Documents\JavaProjects\SuperStarTrak\deez\src\main\java\SST\Systems\Nova.java
 C:\Users\jdubo\Documents\JavaProjects\SuperStarTrak\deez\src\main\java\Ship.java
+C:\Users\jdubo\Documents\JavaProjects\SuperStarTrak\deez\src\main\java\SST\Systems\DeathRay.java
 C:\Users\jdubo\Documents\JavaProjects\SuperStarTrak\deez\src\main\java\SST\Components\Friendly.java
 C:\Users\jdubo\Documents\JavaProjects\SuperStarTrak\deez\src\main\java\SST\Systems\Victory.java
 C:\Users\jdubo\Documents\JavaProjects\SuperStarTrak\deez\src\main\java\SST\MapCoordinates2D.java
@@ -21,6 +22,7 @@ C:\Users\jdubo\Documents\JavaProjects\SuperStarTrak\deez\src\main\java\SST\phase
 C:\Users\jdubo\Documents\JavaProjects\SuperStarTrak\deez\src\main\java\SST\Utilities\DifficultyModifier.java
 C:\Users\jdubo\Documents\JavaProjects\SuperStarTrak\deez\src\main\java\SST\Scan.java
 C:\Users\jdubo\Documents\JavaProjects\SuperStarTrak\deez\src\main\java\SST\Components\Position3D.java
+C:\Users\jdubo\Documents\JavaProjects\SuperStarTrak\deez\src\main\java\SST\Systems\Phaser.java
 C:\Users\jdubo\Documents\JavaProjects\SuperStarTrak\deez\src\main\java\Moving.java
 C:\Users\jdubo\Documents\JavaProjects\SuperStarTrak\deez\src\main\java\SST\GameMaster.java
 C:\Users\jdubo\Documents\JavaProjects\SuperStarTrak\deez\src\main\java\SST\Components\Health.java
