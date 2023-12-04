@@ -1,6 +1,7 @@
 package SST;
 
 import SST.Components.Position2D;
+import java.util.ArrayList;
 
 public class Quadrant extends Entity{
 
@@ -17,11 +18,10 @@ public class Quadrant extends Entity{
     public Entity[][] GetSectorGrid(){
         return sectorGrid;
     }
-<<<<<<< HEAD
 
     private ArrayList<Star> starList = new ArrayList<Star>() {
     };
-    public ArrayList<Star> GetStarList(){ return starList; }
+    public ArrayList<Star> GetStarList(){ return starList; };
 
     public Quadrant(String name, int desX, int desY){
           for (int x = 0; x < 10; x++){
@@ -39,6 +39,5 @@ public class Quadrant extends Entity{
 
           SetGridDesignation(desX, desY);
     }
-=======
->>>>>>> 6f655dab0779122a99fb896e1f5e568a7c222bf2
+
 }

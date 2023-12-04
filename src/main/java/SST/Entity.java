@@ -34,40 +34,52 @@ public class Entity {
     }
 
     // Assume a Position2D component for the entity's position
-    public Position2D getPosition() {
-        return (Position2D) components.get("Position2D");
+
+    // Additional methods for movement
+    public MapCoordinates3D getCoordinates() {
+        return getComponent(MapCoordinates3D.class);
     }
 
-    public void setPosition(Position2D position) {
-        components.put("Position2D", position);
+    public void setCoordinates(MapCoordinates3D coordinates) {
+        addComponent(coordinates);
     }
 
     // Additional methods for movement
     public void moveUp() {
-        Position2D currentPosition = getPosition();
-        if (currentPosition != null) {
-            currentPosition.setY(currentPosition.getY() - 1);
+        MapCoordinates3D currentCoordinates = getCoordinates();
+        if (currentCoordinates != null) {
+            currentCoordinates.setYDes(currentCoordinates.getYDes() - 1);
         }
     }
 
     public void moveDown() {
-        Position2D currentPosition = getPosition();
-        if (currentPosition != null) {
-            currentPosition.setY(currentPosition.getY() + 1);
+        MapCoordinates3D currentCoordinates = getCoordinates();
+        if (currentCoordinates != null) {
+            currentCoordinates.setYDes(currentCoordinates.getYDes() + 1);
         }
     }
 
     public void moveLeft() {
-        Position2D currentPosition = getPosition();
-        if (currentPosition != null) {
-            currentPosition.setX(currentPosition.getX() - 1);
+        MapCoordinates3D currentCoordinates = getCoordinates();
+        if (currentCoordinates != null) {
+            currentCoordinates.setQDes(currentCoordinates.getQDes() - 1);
         }
     }
 
     public void moveRight() {
-        Position2D currentPosition = getPosition();
-        if (currentPosition != null) {
-            currentPosition.setX(currentPosition.getX() + 1);
+        MapCoordinates3D currentCoordinates = getCoordinates();
+        if (currentCoordinates != null) {
+            currentCoordinates.setQDes(currentCoordinates.getQDes() + 1);
         }
+
     }
+    private <T extends IComponent> T getComponent(Class<T> componentType) {
+        for (IComponent component : components.values()) {
+            if (componentType.isAssignableFrom(component.getClass())) {
+                return componentType.cast(component);
+            }
+        }
+        return null;
+    }
+
 }

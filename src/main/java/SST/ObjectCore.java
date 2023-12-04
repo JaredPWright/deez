@@ -1,28 +1,27 @@
 package SST;
-
 public class ObjectCore implements ObjectUtility {
     @Override
-    public boolean isInRange(int range, MapDesignation object1, MapDesignation object2) {
+    public boolean isInRange(int range, MapCoordinates3D object1, MapCoordinates3D object2) {
 
-        MapDesignation temp = compareMapDesignations('-', object1, object2);
+        MapCoordinates3D temp = compareMapDesignations('-', object1, object2);
 
-        if(Math.abs(temp.xDes) <= range && Math.abs(temp.yDes) <= range)
+        if(Math.abs(temp.qDes) <= range && Math.abs(temp.yDes) <= range)
             return true;
 
         return false;
     }
 
     @Override
-    public MapDesignation compareMapDesignations(char operation, MapDesignation leftTerm, MapDesignation rightTerm) {
+    public MapCoordinates3D compareMapDesignations(char operation, MapCoordinates3D leftTerm, MapCoordinates3D rightTerm) {
 
-        MapDesignation temp = new MapDesignation(0,0);
+        MapCoordinates3D temp = new MapCoordinates3D(0,0);
         switch (operation){
             case '-':{
-                temp.xDes = leftTerm.xDes - rightTerm.xDes;
+                temp.qDes = leftTerm.qDes - rightTerm.qDes;
                 temp.yDes = leftTerm.yDes - leftTerm.yDes;
             }
             default:{
-                temp.xDes = leftTerm.xDes + rightTerm.xDes;
+                temp.qDes = leftTerm.qDes + rightTerm.qDes;
                 temp.yDes = leftTerm.yDes + leftTerm.yDes;
             }
         }

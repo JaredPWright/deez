@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.util.Map;
+import SST.Quadrant;
 
 public class LongRangeScan {
     public void scan(Quadrant quadrant) {

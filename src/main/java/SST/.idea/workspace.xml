@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29db9cce-14de-405a-aea1-a8c1a377c8fd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/LongRangeScan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manualmove.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/MainLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sector.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Star.java" beforeDir="false" afterPath="$PROJECT_DIR$/Star.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LongRangeScan.java" beforeDir="false" afterPath="$PROJECT_DIR$/LongRangeScan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjectCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjectCore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjectUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjectUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quadrant.java" beforeDir="false" afterPath="$PROJECT_DIR$/Quadrant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/move.java" beforeDir="false" afterPath="$PROJECT_DIR$/move.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
