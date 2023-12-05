@@ -1,5 +1,6 @@
-import SST.MapCordinates3D;
-import SST.Entitiy;
+package SST;
+import SST.MapCoordinates3D;
+import SST.Entity;
 
 public class move {
     public void move(Entity entity) {

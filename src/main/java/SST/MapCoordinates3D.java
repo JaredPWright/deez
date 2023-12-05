@@ -1,37 +1,39 @@
 package SST;
-
 public class MapCoordinates3D {
-    public int qDes = 0;
-    public int yDes = 0;
-    public int zDes = 0;
+    public static int qDes = 0;
+    public static int yDes = 0;
+    public static int zDes = 0;
 
-    public MapCoordinates3D(int q, int y, int z) {
+    public static MapCoordinates3D(int q, int y, int z) {
         qDes = q;
         yDes = y;
         zDes = z;
     }
 
-    public int getYDes() {
+    public static int getYDes() {
         return yDes;
     }
 
-    public int getQDes() {
+    public static int getQDes() {
+        return qDes;
+    }
+    public static int getZDes() {
         return qDes;
     }
 
-    public int setZDes() {
+    public static int setZDes() {
         return zDes;
     }
 
-    public void setYDes(int yes) {
+    public static void setYDes(int yes) {
         yDes = yes;
     }
 
-    public void setQDes(int qes){
+    public static void setQDes(int qes){
         qDes = qes;
     }
 
-    public void setZDes(int zes){
+    public static void setZDes(int zes){
         zDes = zes;
     }
 }

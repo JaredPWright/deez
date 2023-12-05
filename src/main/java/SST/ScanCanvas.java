@@ -53,7 +53,7 @@ public class ScanCanvas extends JFrame {
         setVisible(true);
     }
 
-    public static void main(String[] args) {
+    public static void ShortScan() {
         SwingUtilities.invokeLater(() -> {
             new ScanCanvas("Custom Pattern", 320, 320);
         });

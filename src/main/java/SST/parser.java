@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 import static java.util.Map.entry;
+import SST.ScanCanvas;
 
 public class parser {
 
@@ -16,7 +17,7 @@ public class parser {
             line += " ";
 
         if (line.equals("SRSCAN") || line.startsWith("S")) {
-            return true;
+            ScanCanvas.ShortScan();
         } else if (line.equals("STATUS") || line.startsWith("ST")) {
             return true;
         } else if (line.equals("LRSCAN") || line.startsWith("L")) {

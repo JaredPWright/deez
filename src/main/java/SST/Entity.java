@@ -2,84 +2,70 @@ package SST;
 
 import SST.Components.IComponent;
 import SST.Components.Name;
+import SST.MapCoordinates3D;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Entity {
 
-    public Map<String, IComponent> components = new HashMap<>();
+    public Map<String,IComponent> components = new HashMap<String,IComponent>();
 
-    public Entity(String name) {
+    public Entity(String name){
         addComponent(new Name(name));
     }
 
     public boolean active = true;
 
-    public void addComponent(IComponent... newComponent) {
-        for (int i = 0; i < newComponent.length; i++) {
+    public void addComponent(IComponent ... newComponent) {
+        for (int i = 0; i < newComponent.length; i++){
             components.put(newComponent[i].componentName, newComponent[i]);
             newComponent[i].entity = this;
         }
     }
 
-    public void removeComponent(String componentName) {
+    public void removeComponent(String componentName){
         components.remove(componentName);
     }
 
-    public void takeAction() {
-        if (!active)
+    public void TakeAction(){
+
+        if(!active)
             return;
         System.out.println("Taking action debug statement.");
     }
+    public MapCoordinates3D getCoordinates(){
+        int q = 0, y = 0, z = 0;
+        y = MapCoordinates3D.getYDes();
+        q = MapCoordinates3D.getQDes();
+        z = MapCoordinates3D.getZDes();
 
-    // Assume a Position2D component for the entity's position
-
-    // Additional methods for movement
-    public MapCoordinates3D getCoordinates() {
-        return getComponent(MapCoordinates3D.class);
+        return new MapCoordinates3D(q, y, z);
     }
 
-    public void setCoordinates(MapCoordinates3D coordinates) {
-        addComponent(coordinates);
-    }
 
     // Additional methods for movement
-    public void moveUp() {
-        MapCoordinates3D currentCoordinates = getCoordinates();
-        if (currentCoordinates != null) {
-            currentCoordinates.setYDes(currentCoordinates.getYDes() - 1);
+    public static void moveUp() {
+        if (MapCoordinates3D.getYDes() != null) {
+            MapCoordinates3D.setYDes(MapCoordinates3D.getYDes() - 1);
         }
     }
 
     public void moveDown() {
-        MapCoordinates3D currentCoordinates = getCoordinates();
-        if (currentCoordinates != null) {
-            currentCoordinates.setYDes(currentCoordinates.getYDes() + 1);
+        if (MapCoordinates3D.getYDes() != null) {
+            MapCoordinates3D.setYDes(MapCoordinates3D.getYDes() + 1);
         }
     }
 
-    public void moveLeft() {
-        MapCoordinates3D currentCoordinates = getCoordinates();
-        if (currentCoordinates != null) {
-            currentCoordinates.setQDes(currentCoordinates.getQDes() - 1);
+    public static void moveLeft() {
+        if (MapCoordinates3D.getQDes() != null) {
+            MapCoordinates3D.setQDes(MapCoordinates3D.getQDes() - 1);
         }
     }
 
-    public void moveRight() {
-        MapCoordinates3D currentCoordinates = getCoordinates();
-        if (currentCoordinates != null) {
-            currentCoordinates.setQDes(currentCoordinates.getQDes() + 1);
+    public static void moveRight() {
+        if (MapCoordinates3D.getQDes() != null) {
+            MapCoordinates3D.setQDes(MapCoordinates3D.getQDes() + 1);
         }
-
     }
-    private <T extends IComponent> T getComponent(Class<T> componentType) {
-        for (IComponent component : components.values()) {
-            if (componentType.isAssignableFrom(component.getClass())) {
-                return componentType.cast(component);
-            }
-        }
-        return null;
-    }
-
 }

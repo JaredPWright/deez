@@ -9,7 +9,7 @@ public class ShortRangeScan implements Scan{
     }
 
     @Override
-    public void GenerateScanCanvas(MapCoordinates3D mapDes, String parentName) {
+    public void ShortRangeScan(MapCoordinates3D mapDes, String parentName) {
         Quadrant tempQuad = GetScanArea(mapDes, parentName);
 
         ScanCanvas srScanCanvas = new ScanCanvas("Short Range Scanner");
