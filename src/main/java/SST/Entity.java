@@ -46,26 +46,29 @@ public class Entity {
 
     // Additional methods for movement
     public static void moveUp() {
-        if (MapCoordinates3D.getYDes() != null) {
-            MapCoordinates3D.setYDes(MapCoordinates3D.getYDes() - 1);
-        }
-    }
-
-    public void moveDown() {
-        if (MapCoordinates3D.getYDes() != null) {
-            MapCoordinates3D.setYDes(MapCoordinates3D.getYDes() + 1);
+        Integer yDes = MapCoordinates3D.getYDes();
+        if (yDes != null) {
+            MapCoordinates3D.setYDes(yDes - 1);
         }
     }
 
     public static void moveLeft() {
-        if (MapCoordinates3D.getQDes() != null) {
-            MapCoordinates3D.setQDes(MapCoordinates3D.getQDes() - 1);
+        Integer qDes = MapCoordinates3D.getQDes();
+        if (qDes != null) {
+            MapCoordinates3D.setQDes(qDes - 1);
         }
     }
 
     public static void moveRight() {
-        if (MapCoordinates3D.getQDes() != null) {
-            MapCoordinates3D.setQDes(MapCoordinates3D.getQDes() + 1);
+        Integer qDes = MapCoordinates3D.getQDes();
+        if (qDes != null) {
+            MapCoordinates3D.setQDes(qDes + 1);
+        }
+    }
+    public static void moveDown() {
+        Integer yDes = MapCoordinates3D.getYDes();
+        if (yDes != null) {
+            MapCoordinates3D.setYDes(yDes + 1);
         }
     }
 }

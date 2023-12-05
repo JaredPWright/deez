@@ -4,7 +4,7 @@ public class MapCoordinates3D {
     public static int yDes = 0;
     public static int zDes = 0;
 
-    public static MapCoordinates3D(int q, int y, int z) {
+    public MapCoordinates3D(int q, int y, int z) {
         qDes = q;
         yDes = y;
         zDes = z;

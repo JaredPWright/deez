@@ -7,11 +7,16 @@
     <list default="true" id="29db9cce-14de-405a-aea1-a8c1a377c8fd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameMaster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MapCoordinates3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/MapCoordinates3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScanCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/ScanCanvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShortRangeScan.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShortRangeScan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manualmove.java" beforeDir="false" afterPath="$PROJECT_DIR$/ManualMove.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/move.java" beforeDir="false" afterPath="$PROJECT_DIR$/move.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phaser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phaser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,11 +64,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/parser.java</url>
-          <line>89</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Sector.java</url>
           <line>16</line>

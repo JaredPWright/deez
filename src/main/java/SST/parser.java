@@ -5,10 +5,13 @@ import java.util.Map;
 import java.util.Random;
 import static java.util.Map.entry;
 import SST.ScanCanvas;
+import SST.ManualMove;
+import SST.Player;
+import SST.GameMaster;
 
 public class parser {
 
-    public static boolean Parse(String args) {
+    public static boolean parse(String args) {
         String line = args.toUpperCase();
 
         if (line.length() < 2)
@@ -63,7 +66,7 @@ public class parser {
         } else if (line.equals("ORBIT") || line.startsWith("O")) {
             return true;
         } else if (line.equals("TRANSPORT") || line.startsWith("T")) {
-            return true;
+            ManualMove.move(GameMaster.player);
         } else if (line.equals("SHUTTLE") || line.startsWith("SHU")) {
             return true;
         } else if (line.equals("MINE") || line.startsWith("MI")) {
@@ -87,7 +90,6 @@ public class parser {
         } else if (line.equals("CURSES")) {
             return true;
         }
-        
     }
 
 

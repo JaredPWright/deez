@@ -80,6 +80,32 @@ public class Player {
         }
         return false;
     }
+    public static void moveUp() {
+        Integer yDes = MapCoordinates3D.getYDes();
+        if (yDes != null) {
+            MapCoordinates3D.setYDes(yDes - 1);
+        }
+    }
+
+    public static void moveLeft() {
+        Integer qDes = MapCoordinates3D.getQDes();
+        if (qDes != null) {
+            MapCoordinates3D.setQDes(qDes - 1);
+        }
+    }
+
+    public static void moveRight() {
+        Integer qDes = MapCoordinates3D.getQDes();
+        if (qDes != null) {
+            MapCoordinates3D.setQDes(qDes + 1);
+        }
+    }
+    public static void moveDown() {
+        Integer yDes = MapCoordinates3D.getYDes();
+        if (yDes != null) {
+            MapCoordinates3D.setYDes(yDes + 1);
+        }
+    }
 
 }
 

@@ -14,7 +14,9 @@ public class move {
         newY = Math.max(0, Math.min(9, newY));
         newZ = Math.max(0, Math.min(9, newZ));
 
-        entity.setCoordinates(new MapCoordinates3D(newX, newY, newZ));
+        MapCoordinates3D.setQDes(newX);
+        MapCoordinates3D.setYDes(newY);
+        MapCoordinates3D.setZDes(newZ);
     }
 
     private int getRandomMovement() {

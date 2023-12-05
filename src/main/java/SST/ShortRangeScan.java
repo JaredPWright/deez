@@ -1,3 +1,4 @@
+/*
 package SST;
 
 public class ShortRangeScan implements Scan{
@@ -20,3 +21,4 @@ public class ShortRangeScan implements Scan{
             }
     }
 }
+*/

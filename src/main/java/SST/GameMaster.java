@@ -21,7 +21,7 @@ public class GameMaster {
     public StarMap starMap;
     public DifficultyModifier difficultyModifier;
 
-    public Player player;
+    public static Player player;
 
     public EntityStorage entityStorage;
     private Map<String, Entity> klingons = new HashMap<String, Entity>();

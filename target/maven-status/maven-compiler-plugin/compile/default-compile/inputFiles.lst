@@ -7,7 +7,7 @@ C:\Users\bentl\OneDrive\Documents\GitHub\deez1\src\main\java\SST\Components\Heal
 C:\Users\bentl\OneDrive\Documents\GitHub\deez1\src\main\java\SST\GameState.java
 C:\Users\bentl\OneDrive\Documents\GitHub\deez1\src\main\java\SST\GameData.java
 C:\Users\bentl\OneDrive\Documents\GitHub\deez1\src\main\java\SST\MainLoop.java
-C:\Users\bentl\OneDrive\Documents\GitHub\deez1\src\main\java\SST\manualmove.java
+C:\Users\bentl\OneDrive\Documents\GitHub\deez1\src\main\java\SST\ManualMove.java
 C:\Users\bentl\OneDrive\Documents\GitHub\deez1\src\main\java\SST\Utilities\EntityStorage.java
 C:\Users\bentl\OneDrive\Documents\GitHub\deez1\src\main\java\SST\Systems\Damage.java
 C:\Users\bentl\OneDrive\Documents\GitHub\deez1\src\main\java\SST\StarMap.java
@@ -35,7 +35,7 @@ C:\Users\bentl\OneDrive\Documents\GitHub\deez1\src\main\java\SST\move.java
 C:\Users\bentl\OneDrive\Documents\GitHub\deez1\src\main\java\SST\Components\Enemy.java
 C:\Users\bentl\OneDrive\Documents\GitHub\deez1\src\main\java\SST\Systems\ClearBoard.java
 C:\Users\bentl\OneDrive\Documents\GitHub\deez1\src\main\java\Ship.java
-C:\Users\bentl\OneDrive\Documents\GitHub\deez1\src\main\java\SST\phaser.java
+C:\Users\bentl\OneDrive\Documents\GitHub\deez1\src\main\java\SST\Phaser.java
 C:\Users\bentl\OneDrive\Documents\GitHub\deez1\src\main\java\SST\Star.java
 C:\Users\bentl\OneDrive\Documents\GitHub\deez1\src\main\java\SST\Components\Position2D.java
 C:\Users\bentl\OneDrive\Documents\GitHub\deez1\src\main\java\SST\Planet.java

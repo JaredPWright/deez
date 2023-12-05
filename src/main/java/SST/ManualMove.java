@@ -1,9 +1,9 @@
+package SST;
 import java.util.Scanner;
+import SST.Entity;
 
 public class ManualMove {
-    public void move(Entity entity) {
-        // Implement logic for manual movement
-        // For simplicity, let's take input from the user
+    public static void move(Player player) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter direction (UP, DOWN, LEFT, RIGHT): ");
         String direction = scanner.nextLine().toUpperCase();
@@ -11,16 +11,16 @@ public class ManualMove {
         // Update the entity's position based on user input
         switch (direction) {
             case "UP":
-                entity.moveUp();
+                player.moveUp();
                 break;
             case "DOWN":
-                entity.moveDown();
+                player.moveDown();
                 break;
             case "LEFT":
-                entity.moveLeft();
+                player.moveLeft();
                 break;
             case "RIGHT":
-                entity.moveRight();
+                player.moveRight();
                 break;
             default:
                 System.out.println("Invalid direction. No movement.");
