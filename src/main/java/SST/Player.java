@@ -5,6 +5,7 @@ import SST.Sector;
 
 public class Player {
     // Attributes
+    private int energy;
     private String name;
     private int health;
     private Quadrant quadrant;
@@ -106,6 +107,13 @@ public class Player {
             MapCoordinates3D.setYDes(yDes + 1);
         }
     }
-
+    public void takeDamage(int damage) {
+        energy -= damage;
+        if (energy <= 0) {
+            System.out.println(name + " has been defeated!");
+        } else {
+            System.out.println(name + " takes damage. Remaining energy: " + energy);
+        }
+    }
 }
 

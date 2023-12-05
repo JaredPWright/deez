@@ -90,6 +90,7 @@ public class parser {
         } else if (line.equals("CURSES")) {
             return true;
         }
+        return false;
     }
 
 
